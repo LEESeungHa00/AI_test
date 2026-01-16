@@ -48,7 +48,7 @@ if 'user_data' not in st.session_state:
 @st.cache_data
 def load_data():
     try:
-        df = pd.read_csv("mozzarella_data.csv")
+        df = pd.read_excel("mozzarella_data.xlsx")
         if 'Date' in df.columns:
             df['Date'] = pd.to_datetime(df['Date'])
         return df
